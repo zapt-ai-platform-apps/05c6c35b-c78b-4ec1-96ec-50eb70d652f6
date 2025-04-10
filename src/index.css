@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #1a4d2e;
+  --color-secondary: #ff9d00;
+  --color-text: #333333;
+  --color-background: #f8f9fa;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.btn-primary {
+  @apply bg-brand-green text-white px-4 py-2 rounded-lg hover:bg-green-900 transition duration-200 cursor-pointer;
+}
+
+.btn-secondary {
+  @apply bg-brand-gold text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition duration-200 cursor-pointer;
+}
+
+.product-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.section-heading {
+  @apply text-2xl font-bold mb-6 border-b-2 border-brand-green pb-2 inline-block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
